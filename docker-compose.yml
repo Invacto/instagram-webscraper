@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app: 
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      replicas: 2 
+      resources:
+        limits:
+          cpus: '8.0'
+          memory: 8G
